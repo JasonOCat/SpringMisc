@@ -1,0 +1,29 @@
+server:
+  port: 7777
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:28077/referential}
+      auto-index-creation: true
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+#logging:
+#  config: classpath:logback.xml
+
+#  level:
+#    org:
+#      springframework:
+#        data:
+#          mongodb:
+#            core:
+#              MongoTemplate: DEBUG
