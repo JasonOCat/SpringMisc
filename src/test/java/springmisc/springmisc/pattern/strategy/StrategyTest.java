@@ -42,7 +42,7 @@ public class StrategyTest {
         int strategyFactoryNumberOfStrategy = strategyFactory.getStrategies().size();
 
         //when
-        //initialization create StartegyFactory and put all Strategies inside its map "strategy"
+        //initialization create StartegyFactory and put all Strategies inside its map "strategy"s
 
         //then
         assertThat(strategies.size()).isEqualTo(strategyFactoryNumberOfStrategy);
