@@ -26,7 +26,6 @@ public class StrategyFactory {
         );
     }
 
-
     public Map<StrategyName, Strategy> getStrategies() {
         return strategies;
     }
