@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 @Component
@@ -16,8 +17,8 @@ public class StrategyFactory {
         createStrategy(strategySet);
     }
 
-    public Strategy findStrategy(StrategyName strategyName) {
-        return strategies.get(strategyName);
+    public Optional<Strategy> findStrategy(StrategyName strategyName) {
+        return Optional.ofNullable(strategies.get(strategyName));
     }
     private void createStrategy(Set<Strategy> strategySet) {
         strategies = new HashMap<>();

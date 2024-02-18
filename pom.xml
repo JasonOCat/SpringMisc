@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>springmisc</groupId>
-    <artifactId>SpringMisc</artifactId>
+    <artifactId>springmisc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringMisc</name>
     <description>SpringMisc</description>

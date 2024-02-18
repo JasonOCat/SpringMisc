@@ -10,9 +10,8 @@ public class StrategyService {
     private final StrategyFactory strategyFactory;
 
     public int doStrategyAdd (){
-        Strategy strategy = strategyFactory.findStrategy(StrategyName.STRATEGY_ADDITION);
-        return strategy.execute(4, 6);
-
-
+        return strategyFactory.findStrategy(StrategyName.STRATEGY_ADDITION)
+                .map(strategy -> strategy.execute(4, 6))
+                .orElseThrow(() -> new IllegalArgumentException("Strategy doesn't exist."));
     }
 }
